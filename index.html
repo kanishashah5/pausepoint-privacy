@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PausePoint privacy policy: data handling, permissions, storage, and your controls.">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>PausePoint Privacy Policy</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #283641; background: #f6f5f1; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 48px 20px; line-height: 1.75; }
+    main { max-width: 820px; margin: auto; background: #fff; padding: clamp(24px, 5vw, 56px); border: 1px solid #dce1e4; border-radius: 20px; }
+    h1 { margin: 0 0 12px; font-size: clamp(1.8rem, 5vw, 2.5rem); line-height: 1.2; letter-spacing: -.035em; }
+    h2 { margin: 36px 0 10px; font-size: 1.2rem; line-height: 1.4; }
+    p { margin: 0 0 18px; }
+    h1 + p { color: #53636f; }
+    a { color: #365d7c; text-underline-offset: 3px; overflow-wrap: anywhere; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid #365d7c; outline-offset: 4px; border-radius: 2px; }
+    code { font-size: .9em; background: #eef1f3; padding: 2px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+    @media (max-width: 480px) { body { padding: 16px 10px; } main { border-radius: 12px; } }
+    @media print { body { padding: 0; background: white; } main { border: 0; padding: 0; } }
+  </style>
+</head>
+<body><main>
+<h1>PausePoint Privacy Policy</h1>
+<p>Effective date: October 23, 2026.</p>
+<p>This policy covers the PausePoint Chrome extension maintained through the <a href="https://github.com/kanishashah5/pausepoint-privacy">PausePoint privacy project</a>.</p>
+<h2>What PausePoint does</h2>
+<p>PausePoint helps you manage your own website time in a Chrome profile. You select domains, active-use allowances, continuous-away reset thresholds and block durations. You may pause, reset, unlock or remove your own rules.</p>
+<h2>Data processed locally</h2>
+<p>PausePoint processes limited <strong>web browsing activity</strong> (website domains and temporary navigation URLs) and <strong>user activity</strong> (active viewing time, tab selection, window focus, page visibility, and idle/locked status) to calculate allowances, recognize continuous absences, and enforce timed blocks. Processing this information locally is still data handling, even though it is not sent to the developer.</p>
+<p>PausePoint stores website rule domains, subdomain preferences, durations, enabled/countdown preferences, accumulated usage, departure/checkpoint timestamps, and block expiry timestamps in <code>chrome.storage.local</code>. These remain in your Chrome profile and are not synchronized through <code>chrome.storage.sync</code>.</p>
+<p>To enforce rules, the extension checks selected-tab hostnames, window focus/minimization, idle/locked state, and visibility heartbeats from permitted websites. It temporarily handles matching tab URLs to redirect open tabs and provide a safe return from the local break page. A return URL may be present in the break page's fragment and Chrome's own local tab/session records; it is not retained as a browsing log in PausePoint storage. Chrome itself has independent history, session and permission behavior outside PausePoint's control.</p>
+<h2>What is not collected or transmitted</h2>
+<p>PausePoint has no backend, account system, remote management or cross-device synchronization. It does not transmit configured domains, timing state or browsing activity to its developers or other third parties. There are no analytics, telemetry, advertisements, external tracking, remotely hosted scripts or fonts. It does not inspect email/page content, take screenshots, collect keystrokes, or persist full URL browsing history. Visiting a website still makes the ordinary requests from your browser to that website, governed by that site's policies.</p>
+<p>The Chrome Web Store and Chrome itself may process installation, update and browser data under their own policies. Those services are not a PausePoint product backend.</p>
+<h2>Permissions and control</h2>
+<p>Website access is optional and requested for domains you configure. It is used for activity heartbeats, matching and navigation redirects. If you decline or revoke access, the rule says <strong>Permission required</strong> and cannot be enforced. Idle access is used to stop charging idle/locked time. Incognito is unsupported.</p>
+<p>Open settings and choose <strong>Clear local data</strong> to remove PausePoint rules, timing state, blocking rules, alarms, script registrations and optional host grants. Removing the extension or its stored profile data also removes its configuration. Clear local data does not erase Chrome's own browsing history, open tab history or other browser records. There is no server copy, cloud backup or recovery service provided by PausePoint.</p>
+<p>Saved configuration and timing state remain until you change or clear them, remove the extension, or remove the relevant Chrome profile data. Timing state is updated or reset as your rules run. PausePoint does not add its own encryption to Chrome's local extension storage; access depends on your device and Chrome profile security.</p>
+<h2>Limited use and sharing</h2>
+<p>PausePoint uses information obtained through Chrome APIs only to provide its website-time management features, in accordance with the Chrome Web Store User Data Policy, including its Limited Use requirements. It does not sell data, transfer it to advertising or analytics services, use it for creditworthiness or lending decisions, or allow developers to remotely read your locally stored rules or activity.</p>
+<h2>Contact and policy hosting</h2>
+<p>For privacy questions, contact the maintainer through the <a href="https://github.com/kanishashah5/pausepoint-privacy/issues">PausePoint issue tracker</a>. Issues are public: do not post passwords, private browsing URLs, or other sensitive information. If you voluntarily submit a support request, the information you include becomes available to GitHub and the project maintainers under GitHub's own policies. Visiting this policy on GitHub is also subject to GitHub's privacy practices; the extension itself does not send your activity to GitHub.</p>
+<h2>Limitations and changes</h2>
+<p>Anyone controlling their Chrome profile can change, disable or uninstall the extension. Other profiles, browsers, devices and phone apps are unaffected. Clock adjustments and browser/OS scheduling can affect timing. Future changes to data practices must be reflected in this policy and the store disclosures before release.</p>
+<p>Changes to this policy will be published on this page with an updated effective date.</p>
+</main></body>
+</html>
